@@ -18,17 +18,17 @@ import net.minecraftforge.registries.ObjectHolder;
 public class InizializzaBlocchi {
 
 	
-	public static Block blocco = null;
+	public static Block marine_grass_block = null;
 	
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
-		blocco = new Block(Block.Properties.create(Material.EARTH).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.9f, 15.0f).sound(SoundType.GROUND)).setRegistryName("blocco");
-		event.getRegistry().register(blocco);
+		marine_grass_block = new Block(Block.Properties.create(Material.EARTH).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.6f, 0.6f).sound(SoundType.GROUND)).setRegistryName("marine_grass_block");
+		event.getRegistry().register(marine_grass_block);
 		
 	}
 	
 	@SubscribeEvent
 	public static void registerBlockItems(final RegistryEvent.Register<Item> event) {
-		event.getRegistry().register(new BlockItem(blocco, new Item.Properties().maxStackSize(10).group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("blocco"));
+		event.getRegistry().register(new BlockItem(marine_grass_block, new Item.Properties().maxStackSize(64).group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("marine_grass_block"));
 	}
 }
