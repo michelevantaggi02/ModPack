@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.michele.flavio.provamod;
 
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
