@@ -1,6 +1,7 @@
 package com.michele.flavio.provamod;
 
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.Properties;
 import net.minecraft.item.ItemGroup;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -12,11 +13,12 @@ import net.minecraftforge.registries.ObjectHolder;
 @ObjectHolder(ExampleMod.MOD_ID)
 public class InizializzaItem {
 
-	public static Item oggetto = null;
+	private static Item gum_ingot = null;
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> evento) {
-		oggetto = new Item(new Item.Properties().group(ItemGroup.MATERIALS)).setRegistryName("oggetto");
-		evento.getRegistry().register(oggetto);
+		Properties proprieta_gum_ingot = new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(64);
+		gum_ingot = new Item(proprieta_gum_ingot).setRegistryName("gum_ingot");
+		evento.getRegistry().register(gum_ingot);
 	}
 }
