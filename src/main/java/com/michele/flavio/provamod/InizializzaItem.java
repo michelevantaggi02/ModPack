@@ -1,8 +1,14 @@
 package com.michele.flavio.provamod;
 
+import com.michele.flavio.provamod.tabCreative.Gruppi;
+import com.michele.flavio.provamod.tabCreative.Misc;
+
+import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Properties;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemTier;
+import net.minecraft.item.SwordItem;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -13,12 +19,20 @@ import net.minecraftforge.registries.ObjectHolder;
 @ObjectHolder(ExampleMod.MOD_ID)
 public class InizializzaItem {
 
+	//lingotti
 	private static Item gum_ingot = null;
+	
+	//spade
+	private static Item gum_sword = null;
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> evento) {
-		Properties proprieta_gum_ingot = new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(64);
+		Properties proprieta_gum_ingot = new Item.Properties().group(ItemGroup.MATERIALS).maxStackSize(64).group(Gruppi.misc_group);
 		gum_ingot = new Item(proprieta_gum_ingot).setRegistryName("gum_ingot");
 		evento.getRegistry().register(gum_ingot);
+		
+		Properties proprieta_gum_sword = new Item.Properties().group(Gruppi.misc_group);
+		gum_sword = new SwordItem(ItemTier.WOOD, 3, 1.6f, proprieta_gum_sword).setRegistryName("gum_sword");//la f sta per float, che è meno preciso del double
+		evento.getRegistry().register(gum_sword);
 	}
 }
