@@ -1,6 +1,7 @@
 package com.michele.flavio.provamod;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.Block.Properties;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.BlockItem;
@@ -22,7 +23,8 @@ public class InizializzaBlocchi {
 	
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
-		marine_grass_block = new Block(Block.Properties.create(Material.EARTH).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.6f, 0.6f).sound(SoundType.GROUND)).setRegistryName("marine_grass_block");
+		Properties proprieta_marine_grass_block = Block.Properties.create(Material.EARTH).harvestTool(ToolType.SHOVEL).hardnessAndResistance(0.6f, 0.6f).sound(SoundType.PLANT);
+		marine_grass_block = new Block(proprieta_marine_grass_block).setRegistryName("marine_grass_block");
 		event.getRegistry().register(marine_grass_block);
 		
 	}
