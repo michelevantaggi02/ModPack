@@ -32,7 +32,7 @@ public class InizializzaItem {
 		evento.getRegistry().register(gum_ingot);
 		
 		Properties proprieta_gum_sword = new Item.Properties().group(Gruppi.misc_group);
-		gum_sword = new SwordItem(ItemTier.WOOD, 3, 1.6f, proprieta_gum_sword).setRegistryName("gum_sword");//la f sta per float, che è meno preciso del double
+		gum_sword = new SwordItem(ItemTier.WOOD, 3, 1.6f, proprieta_gum_sword).setRegistryName("gum_sword");//la f sta per float, che ï¿½ meno preciso del double
 		evento.getRegistry().register(gum_sword);
 	}
 }
