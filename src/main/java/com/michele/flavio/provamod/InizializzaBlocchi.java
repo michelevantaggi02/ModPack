@@ -29,8 +29,12 @@ public class InizializzaBlocchi {
 		
 	}
 	
+	private static Item item_marine_grass_block;
+	
 	@SubscribeEvent
 	public static void registerBlockItems(final RegistryEvent.Register<Item> event) {
-		event.getRegistry().register(new BlockItem(marine_grass_block, new Item.Properties().maxStackSize(64).group(ItemGroup.BUILDING_BLOCKS)).setRegistryName("marine_grass_block"));
+		Item.Properties proprieta_item_marine_grass_block = new Item.Properties().maxStackSize(64).group(ItemGroup.BUILDING_BLOCKS);
+		item_marine_grass_block = new BlockItem(marine_grass_block, proprieta_item_marine_grass_block).setRegistryName("marine_grass_block");
+		event.getRegistry().register(item_marine_grass_block);
 	}
 }
