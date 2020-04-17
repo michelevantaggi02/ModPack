@@ -30,7 +30,7 @@ public class InizializzaBlocchi {
 		marine_grass_block = new Block(proprieta_marine_grass_block).setRegistryName("marine_grass_block");
 		event.getRegistry().register(marine_grass_block);
 		
-		Properties proprieta_gum_ore = Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(1).hardnessAndResistance(1.5f, 3.0f).sound(SoundType.STONE);
+		Properties proprieta_gum_ore = Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).harvestLevel(0).hardnessAndResistance(1.5f, 3.0f).sound(SoundType.STONE);
 		gum_ore = new Block(proprieta_gum_ore).setRegistryName("gum_ore");
 		event.getRegistry().register(gum_ore);
 		

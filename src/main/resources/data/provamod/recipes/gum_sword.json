@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "provamod:gum_ingot"
+    }
+  },
+  "result": {
+    "item": "provamod:gum_sword"
+  }
+}

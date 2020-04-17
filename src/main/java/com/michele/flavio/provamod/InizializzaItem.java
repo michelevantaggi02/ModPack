@@ -2,6 +2,7 @@ package com.michele.flavio.provamod;
 
 import com.michele.flavio.provamod.tabCreative.Gruppi;
 import com.michele.flavio.provamod.tabCreative.Misc;
+import com.michele.flavio.provamod.tierOggetti.TierSpade;
 
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
@@ -13,6 +14,7 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.ObjectHolder;
 
 @Mod.EventBusSubscriber(modid = ExampleMod.MOD_ID, bus = Bus.MOD)
@@ -20,7 +22,7 @@ import net.minecraftforge.registries.ObjectHolder;
 public class InizializzaItem {
 
 	//lingotti
-	private static Item gum_ingot = null;
+	public static Item gum_ingot = null;
 	
 	//spade
 	private static Item gum_sword = null;
@@ -32,7 +34,8 @@ public class InizializzaItem {
 		evento.getRegistry().register(gum_ingot);
 		
 		Properties proprieta_gum_sword = new Item.Properties().group(Gruppi.misc_group);
-		gum_sword = new SwordItem(ItemTier.WOOD, 3, 1.6f, proprieta_gum_sword).setRegistryName("gum_sword");//la f sta per float, che � meno preciso del double
+		gum_sword = new SwordItem(TierSpade.GUM, 2, 0.2f, proprieta_gum_sword).setRegistryName("gum_sword");//la f sta per float, che � meno preciso del double
 		evento.getRegistry().register(gum_sword);
+		
 	}
 }
