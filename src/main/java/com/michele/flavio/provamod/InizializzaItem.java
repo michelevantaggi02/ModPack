@@ -1,20 +1,16 @@
 package com.michele.flavio.provamod;
 
 import com.michele.flavio.provamod.tabCreative.Gruppi;
-import com.michele.flavio.provamod.tabCreative.Misc;
 import com.michele.flavio.provamod.tierOggetti.TierSpade;
 
-import net.minecraft.item.IItemTier;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Properties;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemTier;
 import net.minecraft.item.SwordItem;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.registries.ObjectHolder;
 
 @Mod.EventBusSubscriber(modid = ExampleMod.MOD_ID, bus = Bus.MOD)
