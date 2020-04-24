@@ -22,6 +22,7 @@ public class InizializzaBlocchi {
 	
 	public static Block marine_grass_block = null;
 	public static Block gum_ore = null;
+	public static Block obscure_block = null;
 	
 	@SubscribeEvent
 	public static void registerBlocks(final RegistryEvent.Register<Block> event) {
@@ -33,10 +34,14 @@ public class InizializzaBlocchi {
 		gum_ore = new Block(proprieta_gum_ore).setRegistryName("gum_ore");
 		event.getRegistry().register(gum_ore);
 		
+		Properties proprieta_obscure_block = Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).hardnessAndResistance(50.0F, 1200.0F).harvestLevel(3).sound(SoundType.STONE);
+		obscure_block = new Block(proprieta_obscure_block).setRegistryName("obscure_block");
+		event.getRegistry().register(obscure_block);
 	}
 	
 	private static Item item_marine_grass_block;
 	private static Item item_gum_ore;
+	public static Item item_obscure_block;
 	
 	@SubscribeEvent
 	public static void registerBlockItems(final RegistryEvent.Register<Item> event) {
@@ -47,5 +52,9 @@ public class InizializzaBlocchi {
 		Item.Properties proprieta_item_gum_ore = new Item.Properties().maxStackSize(64).group(Gruppi.misc_group);
 		item_gum_ore = new BlockItem(gum_ore, proprieta_item_gum_ore).setRegistryName("gum_ore");
 		event.getRegistry().register(item_gum_ore);
+		
+		Item.Properties proprieta_item_obscure_block = new Item.Properties().maxStackSize(64).group(Gruppi.misc_group);
+		item_obscure_block = new BlockItem(obscure_block, proprieta_item_obscure_block).setRegistryName("obscure_block");
+		event.getRegistry().register(item_obscure_block);
 	}
 }

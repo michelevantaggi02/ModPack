@@ -2,6 +2,7 @@ package com.michele.flavio.provamod.tierOggetti;
 
 import java.util.function.Supplier;
 
+import com.michele.flavio.provamod.InizializzaBlocchi;
 import com.michele.flavio.provamod.InizializzaItem;
 
 import net.minecraft.item.IItemTier;
@@ -11,6 +12,9 @@ import net.minecraft.util.LazyValue;
 public enum TierSpade implements IItemTier {
 	GUM(0, 50, 1.0f, 0.0F, 14, () -> {
 	      return Ingredient.fromItems(InizializzaItem.gum_ingot);
+	   }),
+	OBSCURE(3, 1600, 9.0F, 4.0F, 10, () -> {
+	      return Ingredient.fromItems(InizializzaBlocchi.item_obscure_block);
 	   });
 
 	private final int harvestLevel;

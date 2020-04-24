@@ -22,6 +22,7 @@ public class InizializzaItem {
 	
 	//spade
 	private static Item gum_sword = null;
+	private static Item obscure_sword = null;
 	
 	@SubscribeEvent
 	public static void registerItems(final RegistryEvent.Register<Item> evento) {
@@ -32,6 +33,10 @@ public class InizializzaItem {
 		Properties proprieta_gum_sword = new Item.Properties().group(Gruppi.misc_group);
 		gum_sword = new SwordItem(TierSpade.GUM, 2,-2.0f, proprieta_gum_sword).setRegistryName("gum_sword");//la f sta per float, che � meno preciso del double
 		evento.getRegistry().register(gum_sword);
+		
+		Properties proprieta_obscure_sword = new Item.Properties().group(Gruppi.misc_group);
+		obscure_sword = new SwordItem(TierSpade.OBSCURE, 6, -3.0F, proprieta_obscure_sword).setRegistryName("obscure_sword");
+		evento.getRegistry().register(obscure_sword);
 		
 	}
 }
