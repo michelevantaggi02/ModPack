@@ -34,7 +34,7 @@ public class InizializzaBlocchi {
 		gum_ore = new Block(proprieta_gum_ore).setRegistryName("gum_ore");
 		event.getRegistry().register(gum_ore);
 		
-		Properties proprieta_obscure_block = Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).hardnessAndResistance(50.0F, 1200.0F).harvestLevel(3).sound(SoundType.STONE);
+		Properties proprieta_obscure_block = Block.Properties.create(Material.ROCK).harvestTool(ToolType.PICKAXE).hardnessAndResistance(50.0F, 1200.0F).harvestLevel(3).sound(SoundType.STONE).lightValue(10);
 		obscure_block = new Block(proprieta_obscure_block).setRegistryName("obscure_block");
 		event.getRegistry().register(obscure_block);
 	}
